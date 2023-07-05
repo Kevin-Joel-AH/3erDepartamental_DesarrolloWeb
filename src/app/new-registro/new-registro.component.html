@@ -1,0 +1,110 @@
+<div id="form-container" [hidden]="form">
+    <img src="https://www.entornoturistico.com/wp-content/uploads/2016/07/Pueblos-Magicos-de-M%C3%A9xico-1280x720.jpg" alt="Logo" />
+    <label for="pueblo-magico">Selecciona el Pueblo Magico:</label>
+    <select id="pueblo-magico" #pue (change)="getPueblo(pue.value)" name="pueblo-magico">
+      <option>Aculco</option>
+      <option>Alamos</option>
+      <option>Atlixco</option>
+      <option>Bacalar</option>
+      <option>Bernal</option>
+      <option>Bustamante</option>
+      <option>Cholula</option>
+      <option>Creel</option>
+      <option>Cuatro Cienegas</option>
+      <option>Cuetzalan</option>
+      <option>Dolores Hidalgo</option>
+      <option>El Oro</option>
+      <option>El Rosario</option>
+      <option>El Fuerte</option>
+      <option>Guadalupe</option>
+      <option>Huauchinango</option>
+      <option>Huamatla</option>
+      <option>Huasca de Ocampo</option>
+      <option>Isla Aguada</option>
+      <option>Isla Mujeres</option>
+      <option>Ixtapan de la Sal</option>
+      <option>Jala</option>
+      <option>Jerez</option>
+      <option>Jiquilpan</option>
+      <option>Lagos de Moreno</option>
+      <option>Linares</option>
+      <option>Loreto</option>
+      <option>Magdalena de Kino</option>
+      <option>Melchor Muzquiz</option>
+      <option>Metepec</option>
+      <option>Mineral del Chico</option>
+      <option>Nombre de Dios</option>
+      <option>Nochistlan de Mejia</option>
+      <option>Orizaba</option>
+      <option>Parras de la Fuente</option>
+      <option>Patzcuaro</option>
+      <option>Real de Asientos</option>
+      <option>Real de Catorce</option>
+      <option>Real de Monte</option>
+      <option>San Cristobal de las Casas</option>
+      <option>San Juan Teotihuacan</option>
+      <option>San Sebastian del Oeste</option>
+      <option>Santa Catarina Juquila</option>
+      <option>Taxco</option>
+      <option>Tepozotlan</option>
+      <option>Tequila</option>
+      <option>Tequisquiapan</option>
+      <option>Valle de Bravo</option>
+      <option>Viesca</option>
+      <option>Villa del Carbon</option>
+      <option>Xico</option>
+      <option>Xicotepec</option>
+      <option>Xilitla</option>
+      <option>Yuriria</option>
+      <option>Zacatlan de las manzanas</option>
+      <option>Zempoala</option>
+      <option>Zimapan</option>
+      <option>Zozocolco de Hidalgo</option>
+    </select>
+    <br />
+    <label for="location">Ubicación:</label>
+    <button id="location" name="location" (click)="form = true">Seleccionar Ubicación en el Mapa</button> Lat: {{late}} | Lon: {{long}}
+    <br /><br>
+    <label for="tipo">Tipo de Local:</label>
+    <select id="tipoo" #tip (change)="getTipo(tip.value)" (change)="setCont()" name="tipo">
+      <option>Restaurante</option>
+      <option>Artesanias</option>
+      <option>Hotel</option>
+      <option>Servicios Turisticos</option>
+      <option>Tiendas de ropa</option>
+    </select>
+    <label for="local-name">Nombre del Local:</label>
+    <input type="text" id="local-name" #no (change)="getNombre(no.value)" name="local-name"/>
+    <br />
+    <label for="description">Descripción:</label>
+    <textarea id="description" #des (change)="getDescripcion(des.value)" name="description"></textarea>
+    <br />
+    <label for="contenido">{{conttxt}}:</label>
+    <textarea id="contenido" #con (change)="getContenido(con.value)" name="contenido"></textarea>
+    <br />
+    <label for="photo">Foto:</label>
+    <input type="file" class="file-input" accept=".jpg,.png" (change)="onFileSelected($event)" #fileUpload/>
+    <div class="file-upload">
+      <button class="upload-btn" (click)="fileUpload.click()">Ingresar Logo</button>
+      {{logo || "No se ah cargado ningún logo"}}
+    </div>
+    <br />
+    <label for="opening-hours">Horario:</label>
+  <div class="listado">
+    <label >Lunes:<input type="text" class="hor" id="lunes" name="lunes" #lun (change)="getLunes(lun.value)"/></label>
+    <label >Martes:<input type="text" class="hor" id="martes" name="martes" #mar (change)="getMartes(mar.value)"/></label>
+    <label >Miercoles:<input type="text" class="hor" id="miercoles" name="miercoles" #mie (change)="getMiercoles(mie.value)"/></label>
+    <label >Jueves:<input type="text" class="hor" id="jueves" name="jueves" #jue (change)="getJueves(jue.value)"/></label>
+    <label >Viernes:<input type="text" class="hor" id="viernes" name="viernes" #vie (change)="getViernes(vie.value)"/></label>
+    <label >Sabado:<input type="text" class="hor" id="sabado" name="sabado" #sab (change)="getSabado(sab.value)"/></label>
+    <label >Domingo:<input type="text" class="hor" id="domingo" name="domingo" #dom (change)="getDomingo(dom.value)"/></label>
+    <label >Festivos:<input type="text" class="hor" id="festivos" name="festivos" #fes (change)="getFestivo(fes.value)"/></label>
+  </div>
+    <button type="submit" (click)="registro()">Registrar</button>
+</div>
+<div id="form-map" [hidden]="!form">
+  <app-google-maps></app-google-maps>
+  <button type="submit" class="Acpt" (click)="form = false" (click)="actCoords()">
+    Aceptar
+  </button>
+</div>

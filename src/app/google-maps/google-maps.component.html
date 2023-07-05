@@ -1,0 +1,13 @@
+<div class="mapa">
+  <google-map width="750px"
+              height="450px"
+              [center]="origen"
+              [zoom]="zoom"
+              (mapClick)="addMarker($event)">
+      <map-marker *ngFor="let markerPosition of markerPositions"
+          [position]="markerPosition"
+          [options]="markerOptions"
+          (mapDrag)="actCoords($event)"></map-marker>
+  </google-map>
+  <h4>Coordenadas:<br>Latitud: {{Latitud}} Longitud: {{Longitud}}</h4>
+</div>

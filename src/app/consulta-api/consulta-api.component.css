@@ -1,0 +1,35 @@
+.negocio{
+  max-width: 800px;
+  padding: 5px;
+  border-radius: 20px;
+  margin: 0 auto 15px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color:#ffffff;
+}
+#n1{
+  background: linear-gradient(60deg,rgb(0, 86, 86) 0%,darkcyan 50%,rgb(0, 215, 215) 100%);
+}
+#n2{
+  background: linear-gradient(60deg,rgb(84, 43, 24) 0%,sienna 50%,rgb(237, 121, 67) 100%);
+}
+#n3{
+  background: linear-gradient(60deg,rgb(18, 74, 18) 0%,forestgreen 50%,rgb(55, 217, 55) 100%);
+}
+#n4{
+  background: linear-gradient(60deg,rgb(154, 85, 1) 0%,darkorange 50%,rgb(250, 181, 97) 100%);
+}
+#n5{
+  background: linear-gradient(60deg,rgb(48, 48, 48) 0%,dimgrey 50%,rgb(173, 172, 172) 100%);
+}
+#horario{
+  margin: 0 auto;
+  text-align: center;
+  border: solid;
+  width: 750px;
+  height: 80px;
+}
+img{
+  border-radius: 15px;
+}

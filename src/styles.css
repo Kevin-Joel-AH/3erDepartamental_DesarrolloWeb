@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+html{
+  /*background: linear-gradient(darkmagenta 10%,lightpink 95%);
+  background: linear-gradient(0.1turn,blueviolet,
+                    darkmagenta,
+                    lightcoral,
+                    darkorchid,
+                    pink,
+                    darkviolet,
+                    deeppink,
+                    fuchsia,
+                    hotpink,
+                    lightpink,
+                    mediumorchid,
+                    mediumvioletred,
+                    orchid,
+                    palevioletred,
+                    violet);*/
+  margin: auto;
+  background-color: #FFC10E;
+  background-image: url("https://mexicorutamagica.mx/wp-content/uploads/2021/11/tianguis-de-pueblos-magicos-pagina.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+}

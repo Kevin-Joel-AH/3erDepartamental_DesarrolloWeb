@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { ConsultaApiComponent } from './consulta-api/consulta-api.component';
+import { Component, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app-peliculas';
+  title = 'app-generate-api';
+
+  nav = false;
 }

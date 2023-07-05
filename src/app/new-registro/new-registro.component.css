@@ -1,0 +1,205 @@
+/* Set the font family and size for the entire form */
+
+body{
+  margin: auto;
+  background-color: #FFC10E;
+  background-image: url("https://mexicorutamagica.mx/wp-content/uploads/2021/11/tianguis-de-pueblos-magicos-pagina.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+form {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+/* Style the logo */
+img {
+  width: 25%;
+  height: 50%;
+  display: block;
+  border-radius: 30px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+/* Style the container div */
+#form-container {
+  max-width: 800px;
+  padding: 20px;
+  background: rgb(121,33,180);
+  background: linear-gradient(90deg, rgba(121,33,180,1) 0%, rgba(190,18,114,1) 22%, rgba(222,17,67,1) 44%, rgba(218,42,57,1) 55%, rgba(241,13,20,1) 64%, rgba(253,29,29,1) 77%, rgba(242,62,24,1) 89%, rgba(240,153,31,1) 100%);
+  border-radius: 50px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color:#ffffff;
+}
+#form-map {
+  max-width: 800px;
+  padding: 20px;
+  background: rgb(121,33,180);
+  background: linear-gradient(90deg, rgba(121,33,180,1) 0%, rgba(190,18,114,1) 22%, rgba(222,17,67,1) 44%, rgba(218,42,57,1) 55%, rgba(241,13,20,1) 64%, rgba(253,29,29,1) 77%, rgba(242,62,24,1) 89%, rgba(240,153,31,1) 100%);
+  border-radius: 50px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color:#ffffff;
+}
+
+
+/* Style the form labels */
+label, .file-upload {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color:#ffffff;
+  margin-left: 5%;
+}
+
+/* Style the form inputs */
+
+.hor{
+  height: auto;
+  width: 200px;
+
+
+}
+
+
+.listado {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  width: 100%;
+}
+
+.listado label {
+  display: inline-block;
+  width: 16.5%;
+  margin-right: 3%;
+  margin-bottom: 20px;
+  font-weight: bold;
+  margin-left: 5%;
+}
+
+.listado input[type="text"] {
+  display: inline-block;
+  width: 90%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.listado label:nth-child(4n+1) {
+  margin-right: 0;
+}
+
+.listado::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+input,
+textarea,
+select {
+  width: 87%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(245, 241, 241);
+  margin-left: 5%;
+
+}
+
+/* Style the location button */
+button#location {
+  background-color: #f07af0;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 5%;
+  font-weight: bold;
+  transition: all 0.3s ease-in;
+}
+button#location:hover{
+  background-color: #f07a9d;
+  transition: all 0.3s ease-in;
+}
+button.upload-btn {
+  background-color: #f07af0;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease-in;
+}
+button.upload-btn:hover{
+  background-color: #f07a9d;
+  transition: all 0.3s ease-in;
+}
+
+/* Style the register button */
+button[type="submit"] {
+  background-color: #06f3fc;
+  color: #0f0e0e;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 45%;
+  transition: all 0.3s ease-in;
+  font-weight: bold;
+}
+input[type="file"]{
+  display: none;
+}
+
+/* Style the register button on hover */
+button[type="submit"]:hover {
+  background-color: lawngreen;
+  transition: all 0.5s ease-in;
+}
+
+/* Specify the grid areas for each element */
+#pueblo-magico {
+  grid-area: pueblo-magico;
+}
+
+#local-name {
+  grid-area: local-name;
+}
+
+#description {
+  grid-area: description;
+}
+
+#photo {
+  grid-area: photo;
+}
+
+#location {
+  grid-area: location;
+}
+
+#opening-hours {
+  grid-area: opening-hours;
+}
+
+#menu {
+  grid-area: menu;
+}
+
+button[type="submit"] {
+  grid-area: submit;
+}

@@ -1,0 +1,26 @@
+.Map{
+  height: fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+.Nav{
+  color: white;
+  background-color: goldenrod;
+  border-style: none;
+  border-radius: 5px;
+  padding: 5px 20px;
+  margin: 10px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: x-large;
+  font-weight: bold;
+  transition: all 0.5s ease-in;
+}
+.Nav:hover{
+  background-color: cornflowerblue;
+  transition: all 0.5s;
+}
+h1{
+  color: antiquewhite;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+}
